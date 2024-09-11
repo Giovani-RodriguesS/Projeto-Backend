@@ -1,0 +1,3 @@
+# Projeto Backend
+
+Este projeto foi desenvolvido com um propósito de aprendizagem. A proposta foi criar uma miniatura de sistema capaz de enviar requisições webhook sobre um evento para um sistema de mensageria, que armazenaria em filas e entregaria para uma API responsável por armazenar num banco de dados SQL. Ao armazenar com exito, a aplicação enviaria um JSON para o sistema de mensageria. (...) 
