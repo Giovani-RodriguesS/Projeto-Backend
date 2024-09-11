@@ -1,5 +1,5 @@
 from sqlalchemy import create_engine, MetaData, text
-from models import meta
+from src.models import meta
 
 
 def db_connection(url, name):
@@ -12,7 +12,7 @@ def db_connection(url, name):
     meta.create_all(bind=engine)
     return engine.connect()
 
-db_name = 'mysql'
-db_url = 'mysql+mysqldb://root:admin@localhost:3306/'
+db_name = 'storage'
+db_url = 'mysql+pymysql://root:1234@localhost:3306/'
 
 connect = db_connection(db_url, db_name)

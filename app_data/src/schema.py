@@ -7,7 +7,6 @@ from pydantic import BaseModel
 """
 
 class Person(BaseModel):
-    person_id: int
     name: str
     email: str
     gender: str
@@ -17,15 +16,13 @@ class Person(BaseModel):
     cpf: str
 
 class Account(BaseModel):
-    account_id : int
     status_id : int
     due_day : int
     person_id : int
     balance : float
     avaliable_balance: float
 
-class Card(BaseModel):
-    card_id: int 	
+class Card(BaseModel):	
     card_number: str
     account_id: int 	 
     status_id:	int 	 

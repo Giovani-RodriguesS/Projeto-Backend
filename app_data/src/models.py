@@ -3,8 +3,8 @@ from sqlalchemy import Column, Table, MetaData
 
 meta = MetaData()
 
-person = Table(
-    'person', meta, 
+people = Table(
+    'people', meta, 
     Column('person_id', Integer, primary_key=True),
     Column('name', String(255)),
     Column('email', String(255)),
@@ -15,8 +15,8 @@ person = Table(
     Column('cpf', String(11))
 )
 
-account = Table(
-    'account', meta, 
+accounts = Table(
+    'accounts', meta, 
     Column('account_id', Integer, primary_key=True),
     Column('status_id', Integer, unique=True),
     Column('due_day', Integer),
@@ -25,13 +25,13 @@ account = Table(
     Column('avaliable_balance', Float)
 )
 
-card = Table(
-    'card', meta, 
+cards = Table(
+    'cards', meta, 
     Column('card_id', Integer, primary_key=True),
     Column('card_number', String(255)),
     Column('account_id', Integer, unique=True),
     Column('status_id', Integer, unique=True),
-    Column('limit', float),
+    Column('limit', Float),
     Column('expiration_date', String(255))
 )
 
